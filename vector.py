@@ -44,7 +44,9 @@ class Vector(object):
         return sum([x*y for x,y in zip(self.coordinates,other.coordinates)])/(self.calcMag()*other.calcMag())
     #计算向量角度
     def calcAngle(self,other):
+        print self.calcCosAngle(other)
         return math.acos(self.calcCosAngle(other))
+
     #向量是否平行
     def clacVectorParalle(self,other):
         return abs(self.calcAngle(other))<1e-5
